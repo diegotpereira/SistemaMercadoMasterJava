@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import org.hibernate.HibernateException;
 
 import view.CadastrarProdutoDialog;
+import view.ListarProdutos;
 import view.Menu;
 
 
@@ -18,6 +19,7 @@ public class InterfaceControl {
 	private Menu telaPrincipal;
 	DaoController daoController;
 	private CadastrarProdutoDialog dlgCadastrarProduto;
+	private ListarProdutos dlgListarProdutos;
 	
 	
 public static void main(String[] args) throws SQLException, ClassNotFoundException {
@@ -40,9 +42,21 @@ public static void main(String[] args) throws SQLException, ClassNotFoundExcepti
          
     }
 
+public void carregarCombo( JComboBox combo, Class classe ) {
+    System.out.println("Entrou");
+    List<?> lista;
+    try {
+        lista = daoController.listar(classe);
+        combo.setModel( new DefaultComboBoxModel( lista.toArray() ) );
+    } catch (HibernateException ex) {
+        JOptionPane.showMessageDialog(telaPrincipal, "Erro ao carregar COMBO. " + ex );
+    }          
+}
+
 public InterfaceControl() throws ClassNotFoundException, SQLException {
 	
 	telaPrincipal = null;
+	dlgListarProdutos = null;
 	
 	try {
 		
@@ -70,7 +84,10 @@ public InterfaceControl() throws ClassNotFoundException, SQLException {
 	 
 	public void janListarProduto() {
 		// TODO Auto-generated method stub
-		
+		 if(dlgListarProdutos == null){
+	            dlgListarProdutos = new ListarProdutos(telaPrincipal, true, this);
+	        }
+	        dlgListarProdutos.setVisible(true);	
 	}
 
 	public void janRealizarVenda() {
