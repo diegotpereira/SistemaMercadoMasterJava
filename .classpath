@@ -4,5 +4,7 @@
 	<classpathentry kind="src" path="SistemaMercadoMasterJava/src"/>
 	<classpathentry kind="lib" path="C:/Users/T.I/eclipse-workspace/JAR/hibernate-core-5.4.19.Final.jar"/>
 	<classpathentry kind="lib" path="C:/Users/T.I/eclipse-workspace/JAR/javax.persistence-api-2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/T.I/eclipse-workspace/JAR/hibernate-commons-annotations-5.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/T.I/eclipse-workspace/JAR/hibernate-annotations-3.0alpha3.jar"/>
 	<classpathentry kind="output" path="SistemaMercadoMasterJava/bin"/>
 </classpath>
