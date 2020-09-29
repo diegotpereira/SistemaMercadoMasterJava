@@ -1,6 +1,9 @@
 package view;
 
 import java.awt.event.ActionEvent;
+import java.sql.SQLException;
+
+import javax.swing.JOptionPane;
 
 import controller.InterfaceControl;
 
@@ -164,6 +167,16 @@ public class CadastrarProdutoDialog extends javax.swing.JDialog{
 
 	protected void BtnSalvarActionPerformed(ActionEvent evt) {
 		// TODO Auto-generated method stub
+		try {
+            this.controller.getGerDao().inserirProduto(
+                    InputProduto.getText(),
+                    Integer.valueOf(InputPesoLitros.getText()),
+                    Double.valueOf(InputValor.getText()),
+                    Integer.valueOf(InputEstoque.getText()));
+        } catch (ClassNotFoundException | SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Erro ao tentar inserir Produto \n" + ex);
+        }
+        this.setVisible(false);
 		
 	}
 
