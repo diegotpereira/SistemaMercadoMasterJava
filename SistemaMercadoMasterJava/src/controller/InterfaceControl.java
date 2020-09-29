@@ -2,13 +2,12 @@ package controller;
 
 import java.sql.SQLException;
 import java.util.List;
-
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
-
 import org.hibernate.HibernateException;
 
+import view.CadastrarProdutoDialog;
 import view.Menu;
 
 
@@ -18,6 +17,8 @@ public class InterfaceControl {
 	// incialização de componentes
 	private Menu telaPrincipal;
 	DaoController daoController;
+	private CadastrarProdutoDialog dlgCadastrarProduto;
+	
 	
 public static void main(String[] args) throws SQLException, ClassNotFoundException {
         
@@ -88,7 +89,11 @@ public InterfaceControl() throws ClassNotFoundException, SQLException {
 	}
 
 	public void janCadProduto() {
-		// TODO Auto-generated method stub
+		// abrir janela de cadastro de produto
+		if(dlgCadastrarProduto == null){
+            dlgCadastrarProduto = new CadastrarProdutoDialog(telaPrincipal, true, this);
+        }
+        dlgCadastrarProduto.setVisible(true);
 		
 	}
 	
