@@ -11,5 +11,14 @@
 	<classpathentry kind="lib" path="C:/Users/administrator/.p2/pool/plugins/org.eclipse.core.databinding_1.9.0.v20200519-1409.jar" sourcepath="C:/Users/administrator/.p2/pool/plugins/org.eclipse.core.databinding_1.9.0.v20200519-1409.jar"/>
 	<classpathentry kind="lib" path="C:/Users/administrator/.p2/pool/plugins/org.eclipse.core.databinding.observable_1.9.0.v20200205-2119.jar" sourcepath="C:/Users/administrator/.p2/pool/plugins/org.eclipse.core.databinding.observable_1.9.0.v20200205-2119.jar"/>
 	<classpathentry kind="lib" path="C:/Users/administrator/.p2/pool/plugins/org.eclipse.jface.databinding_1.11.100.v20200522-1835.jar" sourcepath="C:/Users/administrator/.p2/pool/plugins/org.eclipse.jface.databinding_1.11.100.v20200522-1835.jar"/>
+	<classpathentry kind="lib" path="C:/Users/administrator/eclipse-workspace/jar_files/jboss-logging-3.3.0.Beta1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/administrator/eclipse-workspace/jar_files/jboss-logging-annotations-1.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/administrator/eclipse-workspace/jar_files/jboss-logging-processor-1.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.21.jar"/>
+	<classpathentry kind="lib" path="C:/Users/administrator/eclipse-workspace/jar_files/jboss-transaction.jar"/>
+	<classpathentry kind="lib" path="C:/Users/administrator/eclipse-workspace/jar_files/javax.transaction.jar"/>
+	<classpathentry kind="lib" path="C:/Users/administrator/eclipse-workspace/jar_files/org-apache-commons-logging.jar"/>
+	<classpathentry kind="lib" path="C:/Users/administrator/eclipse-workspace/jar_files/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/administrator/eclipse-workspace/jar_files/hibernate-commons-annotations-4.0.5.Final.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
