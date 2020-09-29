@@ -39,15 +39,6 @@ public class Venda implements Serializable{
 	public Venda() {
 		
 	}
-
-	public Venda(Long id, String dataVenda, model.Cliente cliente, List<model.Produto> listaProdutos) {
-		super();
-		this.id = id;
-		this.dataVenda = dataVenda;
-		this.cliente = cliente;
-		this.listaProdutos = listaProdutos;
-	}
-
 	public Long getId() {
 		return id;
 	}
