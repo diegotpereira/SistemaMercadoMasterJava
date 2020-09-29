@@ -67,9 +67,6 @@ public InterfaceControl() throws ClassNotFoundException, SQLException {
 	        return daoController;
 	    }
 	 
-	 
-
-
 	public void janListarProduto() {
 		// TODO Auto-generated method stub
 		
