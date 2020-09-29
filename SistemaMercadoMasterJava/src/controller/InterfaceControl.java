@@ -1,8 +1,13 @@
 package controller;
 
 import java.sql.SQLException;
+import java.util.List;
 
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+
+import org.hibernate.HibernateException;
 
 import view.Menu;
 
@@ -12,6 +17,7 @@ public class InterfaceControl {
 	
 	// incialização de componentes
 	private Menu telaPrincipal;
+	DaoController daoController;
 	
 public static void main(String[] args) throws SQLException, ClassNotFoundException {
         
@@ -32,6 +38,21 @@ public static void main(String[] args) throws SQLException, ClassNotFoundExcepti
          gerIG.janPrincipal();
          
     }
+
+public InterfaceControl() throws ClassNotFoundException, SQLException {
+	
+	telaPrincipal = null;
+	
+	try {
+		
+		daoController = new DaoController();
+		
+	} catch (HibernateException ex) {
+		// TODO: handle exception
+		JOptionPane.showMessageDialog(telaPrincipal, ex );
+        System.exit(-1);
+	}
+}
 	
 
 	private void janPrincipal() {
@@ -40,8 +61,13 @@ public static void main(String[] args) throws SQLException, ClassNotFoundExcepti
         telaPrincipal = new Menu(this);
     }        
     telaPrincipal.setVisible(true); 
-	
 }
+	
+	 public DaoController getGerDao() {
+	        return daoController;
+	    }
+	 
+	 
 
 
 	public void janListarProduto() {
