@@ -7,6 +7,7 @@ import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import org.hibernate.HibernateException;
 
+import view.CadastrarClienteDialog;
 import view.CadastrarProdutoDialog;
 import view.ListarProdutos;
 import view.Menu;
@@ -20,6 +21,7 @@ public class InterfaceControl {
 	DaoController daoController;
 	private CadastrarProdutoDialog dlgCadastrarProduto;
 	private ListarProdutos dlgListarProdutos;
+	private CadastrarClienteDialog dlgCadastrarCliente;
 	
 	
 public static void main(String[] args) throws SQLException, ClassNotFoundException {
@@ -57,6 +59,7 @@ public InterfaceControl() throws ClassNotFoundException, SQLException {
 	
 	telaPrincipal = null;
 	dlgListarProdutos = null;
+	dlgCadastrarCliente = null;
 	
 	try {
 		
@@ -101,7 +104,11 @@ public InterfaceControl() throws ClassNotFoundException, SQLException {
 	}
 
 	public void janCadCliente() {
-		// TODO Auto-generated method stub
+		// abrir cadastro de cliente
+		if(dlgCadastrarCliente == null){
+            dlgCadastrarCliente = new CadastrarClienteDialog(telaPrincipal, true, this);
+        }
+        dlgCadastrarCliente.setVisible(true);
 		
 	}
 
