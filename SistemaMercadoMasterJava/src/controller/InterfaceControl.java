@@ -9,6 +9,7 @@ import org.hibernate.HibernateException;
 
 import view.CadastrarClienteDialog;
 import view.CadastrarProdutoDialog;
+import view.ListarClientesDialog;
 import view.ListarProdutos;
 import view.Menu;
 
@@ -22,6 +23,7 @@ public class InterfaceControl {
 	private CadastrarProdutoDialog dlgCadastrarProduto;
 	private ListarProdutos dlgListarProdutos;
 	private CadastrarClienteDialog dlgCadastrarCliente;
+	private ListarClientesDialog dlgListarClientes;
 	
 	
 public static void main(String[] args) throws SQLException, ClassNotFoundException {
@@ -60,6 +62,7 @@ public InterfaceControl() throws ClassNotFoundException, SQLException {
 	telaPrincipal = null;
 	dlgListarProdutos = null;
 	dlgCadastrarCliente = null;
+	dlgListarClientes = null;
 	
 	try {
 		
@@ -99,9 +102,12 @@ public InterfaceControl() throws ClassNotFoundException, SQLException {
 	}
 
 	public void janListarCliente() {
-		// TODO Auto-generated method stub
-		
-	}
+		// Abrir janela com lista de clientes
+		if(dlgListarClientes == null){
+            dlgListarClientes = new ListarClientesDialog(telaPrincipal, true, this);
+        }
+        dlgListarClientes.setVisible(true);
+    }
 
 	public void janCadCliente() {
 		// abrir cadastro de cliente
