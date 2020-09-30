@@ -1,6 +1,11 @@
 package view;
 
 
+import java.awt.event.ActionEvent;
+import java.sql.SQLException;
+
+import javax.swing.JOptionPane;
+
 import controller.InterfaceControl;
 
 public class CadastrarClienteDialog extends javax.swing.JDialog{
@@ -195,7 +200,30 @@ public class CadastrarClienteDialog extends javax.swing.JDialog{
 
 		
 	}
-	  // Variables declaration - do not modify//GEN-BEGIN:variables
+	  protected void BtncCancelarActionPerformed(java.awt.event.ActionEvent evt) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void BtncSalvarActionPerformed(java.awt.event.ActionEvent evt) {
+		// TODO Auto-generated method stub
+		try {
+            this.controller.getGerDao().inserirCliente(
+                    InputNome.getText(),
+                    InputTelefone.getText(),
+                    InputCEP.getText(),
+                    InputEndereco.getText(),
+                    InputBairro.getText(),
+                    InputComplemento.getText(),
+                    Integer.valueOf(InputNumero.getText())
+            );
+        } catch (ClassNotFoundException | SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Erro ao adicionar Cliente \n"+ ex);
+        }
+        this.setVisible(false);
+		
+	}
+	// Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtncCancelar;
     private javax.swing.JButton BtncSalvar;
     private javax.swing.JLabel CadastrarCliente;
