@@ -113,7 +113,7 @@ public class Menu extends javax.swing.JFrame {
 	}
 	 protected void ListarVendasActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO Auto-generated method stub
-		interfaceControl.janListarProduto();
+		 interfaceControl.janListarVenda();
 		
 	}
 
