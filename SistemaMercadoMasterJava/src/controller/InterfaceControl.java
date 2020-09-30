@@ -12,6 +12,8 @@ import view.CadastrarProdutoDialog;
 import view.ListarClientesDialog;
 import view.ListarProdutos;
 import view.Menu;
+import view.RealizarVendaDialog;
+
 
 
 
@@ -24,7 +26,7 @@ public class InterfaceControl {
 	private ListarProdutos dlgListarProdutos;
 	private CadastrarClienteDialog dlgCadastrarCliente;
 	private ListarClientesDialog dlgListarClientes;
-	
+	private RealizarVendaDialog dlgRealizarVenda;
 	
 public static void main(String[] args) throws SQLException, ClassNotFoundException {
         
@@ -63,6 +65,7 @@ public InterfaceControl() throws ClassNotFoundException, SQLException {
 	dlgListarProdutos = null;
 	dlgCadastrarCliente = null;
 	dlgListarClientes = null;
+	dlgRealizarVenda = null;
 	
 	try {
 		
@@ -97,7 +100,11 @@ public InterfaceControl() throws ClassNotFoundException, SQLException {
 	}
 
 	public void janRealizarVenda() {
-		// TODO Auto-generated method stub
+		// Abrir janela realizar venda
+		 if(dlgRealizarVenda == null){
+	            dlgRealizarVenda = new RealizarVendaDialog(telaPrincipal, true, this);
+	        }
+	        dlgRealizarVenda.setVisible(true);
 		
 	}
 
