@@ -16,7 +16,7 @@ import controller.InterfaceControl;
 import model.Produto;
 
 
-public class ListarProdutos extends javax.swing.JDialog{
+public class ListarProdutosDialog extends javax.swing.JDialog{
 	
 	InterfaceControl controller;
 	private JPopupMenu popupMenu = new JPopupMenu();
@@ -36,20 +36,20 @@ public class ListarProdutos extends javax.swing.JDialog{
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ListarProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListarProdutosDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ListarProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListarProdutosDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ListarProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListarProdutosDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ListarProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ListarProdutosDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                ListarProdutos dialog = new ListarProdutos(new javax.swing.JFrame(), true, null);
+                ListarProdutosDialog dialog = new ListarProdutosDialog(new javax.swing.JFrame(), true, null);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -61,7 +61,7 @@ public class ListarProdutos extends javax.swing.JDialog{
         });
     }
 	
-    public ListarProdutos(java.awt.Frame parent, boolean modal, InterfaceControl InterfaceControl) {
+    public ListarProdutosDialog(java.awt.Frame parent, boolean modal, InterfaceControl InterfaceControl) {
         super(parent, modal);
         this.controller = InterfaceControl;
         initComponents();

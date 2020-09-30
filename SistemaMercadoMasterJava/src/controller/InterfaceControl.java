@@ -10,7 +10,7 @@ import org.hibernate.HibernateException;
 import view.CadastrarClienteDialog;
 import view.CadastrarProdutoDialog;
 import view.ListarClientesDialog;
-import view.ListarProdutos;
+import view.ListarProdutosDialog;
 import view.ListarVendasDialog;
 import view.Menu;
 import view.RealizarVendaDialog;
@@ -24,7 +24,7 @@ public class InterfaceControl {
 	private Menu telaPrincipal;
 	DaoController daoController;
 	private CadastrarProdutoDialog dlgCadastrarProduto;
-	private ListarProdutos dlgListarProdutos;
+	private ListarProdutosDialog dlgListarProdutos;
 	private CadastrarClienteDialog dlgCadastrarCliente;
 	private ListarClientesDialog dlgListarClientes;
 	private RealizarVendaDialog dlgRealizarVenda;
@@ -97,7 +97,7 @@ public InterfaceControl() throws ClassNotFoundException, SQLException {
 	public void janListarProduto() {
 		// TODO Auto-generated method stub
 		 if(dlgListarProdutos == null){
-	            dlgListarProdutos = new ListarProdutos(telaPrincipal, true, this);
+	            dlgListarProdutos = new ListarProdutosDialog(telaPrincipal, true, this);
 	        }
 	        dlgListarProdutos.setVisible(true);	
 	}
