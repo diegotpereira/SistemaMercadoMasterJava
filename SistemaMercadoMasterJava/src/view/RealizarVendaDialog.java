@@ -32,7 +32,7 @@ public class RealizarVendaDialog extends javax.swing.JDialog{
         ComboCliente = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         ComboProduto = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        BtnAdicionar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         ListaCarrinho = new javax.swing.JList<>();
         jLabel5 = new javax.swing.JLabel();
@@ -54,13 +54,13 @@ public class RealizarVendaDialog extends javax.swing.JDialog{
 
         jLabel3.setText("Produto");
 
-        jButton1.setText("Adicionar");
-        jButton1.setMaximumSize(new java.awt.Dimension(84, 25));
-        jButton1.setMinimumSize(new java.awt.Dimension(85, 25));
-        jButton1.setPreferredSize(new java.awt.Dimension(85, 30));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BtnAdicionar.setText("Adicionar");
+        BtnAdicionar.setMaximumSize(new java.awt.Dimension(84, 25));
+        BtnAdicionar.setMinimumSize(new java.awt.Dimension(85, 25));
+        BtnAdicionar.setPreferredSize(new java.awt.Dimension(85, 30));
+        BtnAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+            	BtnAdicionarActionPerformed(evt);
             }
         });
 
@@ -118,7 +118,7 @@ public class RealizarVendaDialog extends javax.swing.JDialog{
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BtnVender, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BtnAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(BtnRemover, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(BtnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(53, 53, 53))
@@ -166,7 +166,7 @@ public class RealizarVendaDialog extends javax.swing.JDialog{
                             .addComponent(labelValorTotal))
                         .addGap(33, 33, 33))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BtnAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(BtnVender, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -213,7 +213,7 @@ public class RealizarVendaDialog extends javax.swing.JDialog{
 		
 	}
 
-	protected void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+	protected void BtnAdicionarActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO Auto-generated method stub
 		Produto produto = (Produto) ComboProduto.getModel().getSelectedItem();
         carrinho.addElement(produto);
@@ -228,7 +228,7 @@ public class RealizarVendaDialog extends javax.swing.JDialog{
     private javax.swing.JComboBox<String> ComboCliente;
     private javax.swing.JComboBox<String> ComboProduto;
     private javax.swing.JList<String> ListaCarrinho;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton BtnAdicionar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
