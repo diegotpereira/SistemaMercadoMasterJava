@@ -11,6 +11,7 @@ import view.CadastrarClienteDialog;
 import view.CadastrarProdutoDialog;
 import view.ListarClientesDialog;
 import view.ListarProdutos;
+import view.ListarVendasDialog;
 import view.Menu;
 import view.RealizarVendaDialog;
 
@@ -27,6 +28,7 @@ public class InterfaceControl {
 	private CadastrarClienteDialog dlgCadastrarCliente;
 	private ListarClientesDialog dlgListarClientes;
 	private RealizarVendaDialog dlgRealizarVenda;
+	private ListarVendasDialog dlgListarVendas;
 	
 public static void main(String[] args) throws SQLException, ClassNotFoundException {
         
@@ -66,6 +68,7 @@ public InterfaceControl() throws ClassNotFoundException, SQLException {
 	dlgCadastrarCliente = null;
 	dlgListarClientes = null;
 	dlgRealizarVenda = null;
+	dlgListarVendas = null; 
 	
 	try {
 		
@@ -131,6 +134,15 @@ public InterfaceControl() throws ClassNotFoundException, SQLException {
             dlgCadastrarProduto = new CadastrarProdutoDialog(telaPrincipal, true, this);
         }
         dlgCadastrarProduto.setVisible(true);
+		
+	}
+
+	public void janListarVenda() {
+		// Abrir jnela com lista de vendas
+		if(dlgListarVendas == null){
+            dlgListarVendas = new ListarVendasDialog(telaPrincipal, true, this);
+        }
+        dlgListarVendas.setVisible(true);
 		
 	}
 	
